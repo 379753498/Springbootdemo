@@ -1,5 +1,9 @@
 package SpringController;  
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,18 +33,22 @@ public class MyFirstSpringBootController {
     }  
       
 	int a=0;
-    @RequestMapping("/hello/{myName}")  
-    String index(@PathVariable String myName) {  
+    @RequestMapping("/{id}/{myName}/{date}")  
+    User index(@PathVariable int id ,@PathVariable String myName,@PathVariable String date) throws ParseException {  
+    	
     	
     	   ApplicationContext applicationContext = Springutil.getApplicationContext();
     	    
     	   User bean = applicationContext.getBean(User.class);
-    	   String name = bean.getName();
+    	   bean.setName(myName);
+    	   bean.setId(id);
+    	   bean.setDate(new Date());
+    
     	        
-    	   System.out.println(name+a);
+    	
     	   a++;
 
-        return "Hello "+name+"!!!"+a;  
+        return bean;  
         
        
     }  
