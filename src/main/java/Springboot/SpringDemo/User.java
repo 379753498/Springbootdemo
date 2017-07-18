@@ -1,55 +1,36 @@
-
 package Springboot.SpringDemo;
-
-import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-
-
-
-
-
 /**
- * 实体类
- * 
- * @author wujing
+ * ${DESCRIPTION}
+ *
+ * @author Ricky Fung
+ * @create 2017-01-02 23:43
  */
-@Component
 public class User {
-	
-	
-	private int id;
-	private String name;
-	private Date date;
+    private long id;
+    private String username;
+    private String password;
 
-	public int getId() {
-		return id;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	
-	public String getName() {
-		return name;
-	}
-	
-	@Autowired
-	@Value("大婶")
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getUsername() {
+        return username;
+    }
 
-	public Date getDate() {
-		return date;
-	}
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

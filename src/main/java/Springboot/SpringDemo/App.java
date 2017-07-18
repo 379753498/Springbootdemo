@@ -1,9 +1,10 @@
 package Springboot.SpringDemo;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import SpringController.MyFirstSpringBootController;
+import com.help.SpringController.MyFirstSpringBootController;
 
 
 /**
@@ -11,7 +12,7 @@ import SpringController.MyFirstSpringBootController;
  *
  */
 
-
+@SpringBootApplication
 public class App 
 {
     public static void main( String[] args )
