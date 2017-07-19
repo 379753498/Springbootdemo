@@ -1,10 +1,14 @@
 package Springboot.SpringDemo;
+
+import org.springframework.stereotype.Component;
+
 /**
  * ${DESCRIPTION}
  *
  * @author Ricky Fung
  * @create 2017-01-02 23:43
  */
+@Component
 public class User {
     private long id;
     private String username;

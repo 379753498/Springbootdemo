@@ -2,9 +2,8 @@ package Springboot.SpringDemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
-import com.help.SpringController.MyFirstSpringBootController;
 
 
 /**
@@ -13,12 +12,13 @@ import com.help.SpringController.MyFirstSpringBootController;
  */
 
 @SpringBootApplication
+@ComponentScan(basePackages={"com.help.SpringController","Springboot.SpringDemo","SpringbootSwagger2"})
 public class App 
 {
     public static void main( String[] args )
     {
     	
-    	   SpringApplication.run(MyFirstSpringBootController.class, args);
+    	   SpringApplication.run(App.class, args);
    
     }
 }

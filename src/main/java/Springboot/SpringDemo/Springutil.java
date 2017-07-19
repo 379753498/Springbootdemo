@@ -4,24 +4,27 @@ import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
-
+@Component
 public class Springutil implements ApplicationContextAware {
 
 
     private static ApplicationContext applicationContext = null;
 
     
-    public void setApplicationContext(ApplicationContext arg0) throws BeansException {
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         if (Springutil.applicationContext == null) {
-        	Springutil.applicationContext = arg0;
+        	Springutil.applicationContext = applicationContext;
+        	
+        	
+        	System.out.println("Springutil.getApplicationContext()方法获取上下文");
         }
     }
 
     // 获取applicationContext
     public static ApplicationContext getApplicationContext() {
     	  if (Springutil.applicationContext == null) {
-          	Springutil.applicationContext = new ClassPathXmlApplicationContext("classpath:**/applicationContext*.xml");
           }
 		return applicationContext;
     }
