@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 
 @SpringBootApplication
-@ComponentScan(basePackages={"com.help.SpringController","Springboot.SpringDemo","SpringbootSwagger2"})
+@ComponentScan(basePackages={"com.help.SpringController","Springboot.SpringDemo","SpringbootSwagger2","com.Springboot.Exception"})
 public class App 
 {
     public static void main( String[] args )
